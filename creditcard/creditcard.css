@@ -8,7 +8,8 @@
     gap: 10px 10px;
 }
 
-#front, #back {
+#front,
+#back {
     margin: auto;
     padding: 20px;
     background-color: #d1d1d1;
@@ -17,7 +18,7 @@
     width: 325px;
     height: 205px;
     display: grid;
-    grid-template-columns:  repeat(3, 95px);
+    grid-template-columns: repeat(3, 95px);
     grid-template-rows: repeat(3, 55px);
     gap: 20px 20px;
     justify-items: auto;
@@ -46,7 +47,8 @@ button {
     grid-row-end: 8;
 }
 
-#total, #cardHolderContainer {
+#total,
+#cardHolderContainer {
     grid-column-start: 1;
     grid-column-end: 3;
 }
@@ -67,7 +69,11 @@ button {
     gap: 10px 10px;
 }
 
-#cardNumber, #cardHolder, #expirationMonth, #expirationYear, #cvc {
+#cardNumber,
+#cardHolder,
+#expirationMonth,
+#expirationYear,
+#cvc {
     height: 20px;
     width: 98%;
 }
@@ -91,4 +97,23 @@ button {
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
+}
+
+/* Error and Success Messages */
+#form-errors {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#card-success {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.invalid {
+    border: 1px solid red;
 }
