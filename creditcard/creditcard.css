@@ -100,20 +100,9 @@ button {
 }
 
 /* Error and Success Messages */
-#form-errors {
-    margin-top: 20px;
-    text-align: center;
-}
-
-#card-success {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.hidden {
-    display: none;
-}
-
-.invalid {
-    border: 1px solid red;
+.errorMsg {
+    position: absolute;
+    top: 400px;
+    left: 500px;
+    color: red;
 }
