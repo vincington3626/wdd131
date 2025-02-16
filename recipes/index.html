@@ -1,54 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Page Title" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeBook</title>
+    <link rel="stylesheet" href="recipes.css">
+    <script src="recipes.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Mooli&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta property="og:title" content="RecipeBook">
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Page Description" />
-    <meta property="og:image" content="URL to an image" />
-    <meta property="og:url" content="URL of the page" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="description" content="WDD131 - week09 Assignment" />
-    <title>Recipe Book</title>
-    <link rel="stylesheet" href="./recipes.css" />
-    <script type="module" src="./js/main.js"></script>
-  </head>
-  <body>
+    <meta property="og:description" content="A page to find recipes">
+    <meta property="og:image" content="https://placehold.co/1200x630">
+    <meta property="og:url" content="https://vincington3626.github.io/wdd131/recipes/index.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="A page to find recipes">
+    <meta name="author" content="Kimball Bushi">
+    <script src="main.js" defer></script>
+</head>
+<body>
     <header>
-      <div class="title">
-        <img src="./images/recipe-book.png" alt="header recipe book image" />
-        <h1>Recipe Book</h1>
-      </div>
-      <form>
-        <input
-          type="search"
-          id="search"
-          name="search"
-          placeholder="Find Recipe"
-        />
-        <button type="submit">
-          <img src="./images/search.svg" alt="search svg image" />
-        </button>
-      </form>
+        <img src="images/recipe-book.png" alt="logo">
+        <h1 id="title">RECIPEBOOK</h1>
     </header>
-
-    <section class="recipe">
-      <div id="recipes-container"></div>
-    </section>
+    <main>
+        <form id="search-bar" action="" method="get">
+            <label for="search"></label>
+            <input type="text" name="search" id="search" placeholder="Find a recipe" required>
+            <button type="submit" id="submit"><img src="images/search.svg" alt="submit"></button>
+        </form>
+        <div id="content">
+            
+        </div>
+        <section class="recipe">
+            <img src="images/apple-crisp.jpg" alt="">
+            <div class="info">
+                <ul class="recipe-tags">
+                    <li>dessert</li>
+                </ul>
+                <h2><a href="#">Apple Crisp</a></h2>
+                <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">☆</span>
+                </span>
+                <p class="recipe-description">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
+            </div>
+        </section>
+    </main>
     <footer>
-      <div class="social">
-        <a href="#"
-          ><img src="images/instagram_icon.svg" alt="instagram icon"
-        /></a>
-        <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon" /></a>
-        <a href="#"
-          ><img src="images/pinterest_icon.svg" alt="pinterest icon"
-        /></a>
-      </div>
-      <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons"
-        >Recipe icons created by Freepik - Flaticon</a
-      >
+        <div class="social">
+            <a  class="credit" href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <div class="link-img">
+                <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+                <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+                <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+            </div>
+        </div>
     </footer>
-  </body>
+</body>
 </html>
