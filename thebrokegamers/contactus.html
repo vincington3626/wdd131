@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>The Broke Gamers | Contact Us</title>
+    <link type="text/css" rel="stylesheet" href="styles/contactusstyle.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html">
+                <img src="images/logo-png.png" alt="Company Logo" class="logo"></a>
+            <nav>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="store.html">Store</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="contactus.html">Contact Us</a>
+                    <a href="site-plan.html">Site Plan</a>
+                </div>
+            </nav>
+            
+            <!-- Cart Icon -->
+            <div class="cart-icon" onclick="window.location.href='cart.html'">
+                <img src="images/Cart-Icon.png" alt="Cart Icon" class="cart-icon-img">
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <p class="lol">Have questions or feedback? Reach out to us using the form below or through our contact
+                details.</p>
+            <form action="submit_contact_form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p class="link"><a href="contactus.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="Twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram icon">
+                </a>
+            </div>
+        </div>
+        <div class="footer-center">
+            <p class="link"><a href="site-plan.html">Site Plan</a></p>
+            <p class="copyright">&copy; 2024 The Broke Gamers. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

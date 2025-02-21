@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>The Broke Gamers | Checkout</title>
+    <link rel="stylesheet" href="styles/indexstyles.css">
+    <link rel="stylesheet" href="styles/cart.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html">
+                <img src="images/logo-png.png" alt="Company Logo" class="logo">
+            </a>
+            <nav>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="store.html">Store</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="contactus.html">Contact Us</a>
+                    <a href="site-plan.html">Site Plan</a>
+                </div>
+            </nav>
+            <!-- Cart Icon -->
+            <div class="cart-icon" onclick="window.location.href='cart.html'">
+                <img src="images/Cart-Icon.png" alt="Cart Icon" class="cart-icon-img">
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="checkout-section">
+            <h2>Your Cart</h2>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-total">
+                <h3>Total: $<span id="cart-total">0.00</span></h3>
+                <button id="checkout-button">Proceed to Checkout</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p class="link"><a href="contactus.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="Twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram icon">
+                </a>
+            </div>
+        </div>
+        <div class="footer-center">
+            <p class="link"><a href="site-plan.html">Site Plan</a></p>
+            <p class="copyright">&copy; 2024 The Broke Gamers. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>

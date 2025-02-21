@@ -1,0 +1,298 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Root variables */
+:root {
+  --primary-color: #D9984A;
+  --secondary-color: #BF843B;
+  --accent1-color: #593F1E;
+  --accent2-color: #0D0D0D;
+
+  --heading-font: "Jersey 25";
+  --paragraph-font: "Noto Serif Display", serif, sans-serif;
+
+  --headline-color-on-white: #D1AE80;
+  --headline-color-on-color: #D9984A;
+  --paragraph-color-on-white: #D1AE80;
+  --paragraph-color-on-color: #D9984A;
+  --paragraph-background-color: #FFFFFF;
+}
+
+/* Global styles */
+body {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  background-color: var(--accent2-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #BF9159;
+  color: var(--headline-color-on-color);
+  padding: 1em;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100px;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+nav a:hover {
+  color: black;
+  background-color: var(--headline-color-on-color);
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-color);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-color);
+  margin-top: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+ul {
+  margin-bottom: 20px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #BF9159;
+  color: var(--headline-color-on-color);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-left p {
+  margin: 0;
+}
+
+.footer-center {
+  text-align: center;
+  flex-grow: 1;
+}
+
+footer a {
+  color: black;
+  text-decoration: underline;
+  /* Always underlined */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: white;
+}
+
+.copyright {
+  color: black;
+}
+
+.social {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.social a {
+  margin: 0 10px;
+}
+
+.social img {
+  width: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+
+  .social a {
+    display: block;
+    margin: 10px auto;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left {
+    align-items: center;
+  }
+
+  .footer-center {
+    margin-top: 20px;
+  }
+}
+
+/* About Us Section */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-image {
+  flex-basis: 30%;
+  max-width: 200px;
+  margin: 20px auto;
+}
+
+.about-image img {
+  display: block;
+  width: 140%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+  font-size: 28px;
+  /* Increase font size for the About Us title */
+  text-align: center;
+}
+
+.about-section h3 {
+  font-size: 22px;
+  /* Increase font size for the section headings */
+  text-align: left;
+  /* Align left for all h3 except "About Us" */
+}
+
+/* Shop Section */
+.shop-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.shop-image {
+  flex-basis: 30%;
+  /* Adjust flex basis to allocate space */
+  max-width: 20%;
+  /* Set maximum width for the image */
+}
+
+.shop-image img {
+  display: block;
+  width: 100%;
+  /* Make image responsive */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shop-text {
+  flex: 1;
+  /* Take up remaining space */
+  margin-left: 20px;
+  /* Add margin for spacing between image and text */
+}
+
+.shop-section h2 {
+  font-size: 28px;
+  /* Keep consistent font size for the Shop title */
+  text-align: center;
+  /* Center align the title */
+}
+
+.shop-section h3 {
+  font-size: 22px;
+  /* Keep consistent font size for section headings */
+  text-align: left;
+  /* Align left for all h3 headings */
+}
+
+@media (max-width: 768px) {
+  .shop-section {
+    flex-direction: column;
+    /* Stack items vertically on smaller screens */
+    align-items: center;
+    /* Center align items on smaller screens */
+  }
+
+  .shop-image {
+    flex-basis: 90%;
+    /* Full width for image on smaller screens */
+    max-width: 90%;
+    /* Set maximum width for image on smaller screens */
+    margin-bottom: 20px;
+    /* Add margin below image on smaller screens */
+    margin-right: 0;
+    /* Remove right margin on smaller screens */
+  }
+
+  .shop-text {
+    max-width: 100%;
+    /* Full width for text on smaller screens */
+    margin-left: 0;
+    /* Remove left margin on smaller screens */
+  }
+}
