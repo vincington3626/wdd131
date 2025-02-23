@@ -25,6 +25,7 @@ function displayCartItems() {
     });
 
     cartTotal.textContent = total.toFixed(2);
+    updateCartCount(); 
 }
 
 // Remove item from cart
@@ -32,24 +33,42 @@ function removeItem(index) {
     cart.splice(index, 1);
     localStorage.setItem('cart', JSON.stringify(cart));
     displayCartItems();
-    updateCartCount();
+    updateCartCount(); // Update cart count after removing an item
 }
 
 // Update cart count
 function updateCartCount() {
     const cartCount = document.getElementById('cart-count');
-    cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+    if (cartCount) {
+        cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+    }
+}
+
+// Add item to cart
+function addToCart(item) {
+    const existingItem = cart.find(cartItem => cartItem.id === item.id);
+    if (existingItem) {
+        existingItem.quantity += 1; // Increment quantity if item already exists
+    } else {
+        cart.push({ ...item, quantity: 1 }); // Add new item to cart
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount(); // Update cart count after adding an item
 }
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    displayCartItems();
-    updateCartCount();
+    if (cartItems) {
+        displayCartItems(); // Only display cart items if on the cart page
+    }
+    updateCartCount(); // Always update the cart count
 });
 
 // Listen for changes in localStorage
 window.addEventListener('storage', () => {
     cart = JSON.parse(localStorage.getItem('cart')) || [];
-    displayCartItems();
-    updateCartCount();
+    if (cartItems) {
+        displayCartItems(); // Only display cart items if on the cart page
+    }
+    updateCartCount(); // Always update the cart count
 });

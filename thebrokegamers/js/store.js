@@ -1,6 +1,6 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// Gaming Parts Data with Example Images
+
 const gamingParts = [
     {
         id: 1,
@@ -52,7 +52,7 @@ const gamingParts = [
     }
 ];
 
-// Generate parts list
+
 function generatePartsList() {
     const container = document.getElementById('parts-list');
     if (!container) {
@@ -60,8 +60,8 @@ function generatePartsList() {
         return;
     }
 
-    console.log("Generating parts list..."); // Debug log
-    container.innerHTML = ''; // Clear existing content
+    console.log("Generating parts list...");
+    container.innerHTML = '';
 
     gamingParts.forEach(part => {
         const partCard = document.createElement('div');
@@ -153,7 +153,7 @@ function showNotification(message) {
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("Store page loaded!"); // Debug log
+    console.log("Store page loaded!");
     generatePartsList();
     updateCartCount();
 });

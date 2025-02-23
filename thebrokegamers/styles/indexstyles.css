@@ -11,8 +11,8 @@
   --paragraph-font: "Noto Serif Display", serif;
 
   --spacing-small: 1rem;
-  --spacing-medium: 2rem;
-  --spacing-large: 3rem;
+  --spacing-medium: 1.5rem;
+  --spacing-large: 2rem;
 }
 
 /* ===== Global Reset ===== */
@@ -26,7 +26,7 @@ body {
   font-family: var(--paragraph-font);
   color: var(--text-color-light);
   background-color: var(--accent2-color);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 h1,
@@ -38,7 +38,7 @@ h3 {
 }
 
 p {
-  margin-bottom: var(--spacing-medium);
+  margin-bottom: var(--spacing-small);
   color: var(--text-color-light);
 }
 
@@ -78,11 +78,14 @@ header {
 }
 
 .nav-links a {
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  font-weight: normal;
   color: var(--text-color-dark);
-  font-size: 1.1rem;
+  text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -132,12 +135,12 @@ main {
 
 .welcome-section h2 {
   font-size: 2.5rem;
-  margin-bottom: var(--spacing-medium);
+  margin-bottom: var(--spacing-small);
 }
 
 .welcome-section p {
   max-width: 800px;
-  margin: 0 auto var(--spacing-medium);
+  margin: 0 auto var(--spacing-small);
 }
 
 .image-container {
@@ -150,6 +153,7 @@ main {
 .image-overlay {
   position: relative;
   width: 48%;
+  height: 300px;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -157,7 +161,8 @@ main {
 
 .image-overlay img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
 }
@@ -197,7 +202,11 @@ main {
 
 .why-choose-section h2 {
   font-size: 2rem;
-  margin-bottom: var(--spacing-medium);
+  margin-bottom: var(--spacing-small);
+}
+
+.why-choose-section p {
+  margin-bottom: var(--spacing-small);
 }
 
 /* Accordion Styles */
@@ -213,12 +222,11 @@ main {
 
 .accordion-input {
   display: none;
-  /* Hide the checkboxes */
 }
 
 .accordion-button {
   width: 100%;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   text-align: left;
   background-color: transparent;
   border: none;
@@ -250,15 +258,13 @@ main {
 }
 
 .accordion-content p {
-  margin: 1rem 0;
+  margin: 0.75rem 0;
   color: var(--text-color-light);
 }
 
-/* Expand content when checkbox is checked */
 .accordion-input:checked~.accordion-content {
   max-height: 200px;
-  /* Adjust based on content */
-  padding: 1rem;
+  padding: 0.75rem 1rem;
 }
 
 .accordion-input:checked~.accordion-button i {
@@ -272,7 +278,7 @@ main {
 
 .products-section h2 {
   font-size: 2rem;
-  margin-bottom: var(--spacing-medium);
+  margin-bottom: var(--spacing-small);
 }
 
 .products-section h3 {
@@ -280,59 +286,63 @@ main {
   margin-bottom: var(--spacing-small);
 }
 
+.products-section p {
+  margin-bottom: var(--spacing-small);
+}
+
 /* ===== Footer ===== */
 footer {
-    background-color: var(--accent1-color);
-    color: var(--headline-color-on-color);
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: var(--accent1-color);
+  color: var(--headline-color-on-color);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-left p {
-    margin: 0;
+  margin: 0;
 }
 
 .footer-center {
-    text-align: center;
-    flex-grow: 1;
+  text-align: center;
+  flex-grow: 1;
 }
 
 footer a {
-    color: black;
-    text-decoration: underline; /* Always underlined */
-    font-weight: bold;
-    transition: color 0.3s ease;
+  color: black;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: white;
+  color: white;
 }
 
 .copyright {
-    color: black;
+  color: black;
 }
 
 .social {
-    margin-top: 10px;
-    display: flex;
-    justify-content: flex-end;
-    flex-grow: 1;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
 }
 
 .social a {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .social img {
-    width: 40px;
+  width: 40px;
 }
 
 /* ===== Responsive Design ===== */
