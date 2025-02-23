@@ -1,94 +1,30 @@
-/* Importing fonts */
-@import url('https://fonts.googleapis.com/css2?family=Jersey+25&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+/* Specific styles for the Contact Us page */
 
-/* Setting root variables */
-:root {
-  --primary-color: #D9984A;
-  --secondary-color: #BF843B;
-  --accent1-color: #593F1E;
-  --accent2-color: #0D0D0D;
-
-  --heading-font: "Jersey 25";
-  --paragraph-font: "Noto Serif Display", serif, sans-serif;
-
-  --headline-color-on-white: #D1AE80;
-  --headline-color-on-color: #D9984A;
-  --paragraph-color-on-white: #D1AE80;
-  --paragraph-color-on-color: #D9984A;
-  --paragraph-background-color: #FFFFFF;
-}
-
-/* General styles */
-body {
-  font-family: var(--paragraph-font);
-  color: var(--accent1-color);
-  background-color: var(--accent2-color);
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #BF9159;
-  color: var(--headline-color-on-color);
-  padding: 1em;
-}
-
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  width: 100px;
-}
-
-nav {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  color: black;
-  text-decoration: none;
-  padding: 5px 10px;
-  font-size: 22px;
-  font-weight: normal;
-}
-
-
-nav a:hover {
-  color: black;
-  background-color: var(--headline-color-on-color);
-}
-
-
-main {
+/* Contact Section */
+.contact-section {
+  max-width: 600px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-h2 {
+.contact-section h2 {
   font-family: var(--heading-font);
   color: var(--headline-color-on-color);
   text-align: center;
   margin-bottom: 10px;
 }
 
-p {
+.contact-section p.lol {
+  color: var(--paragraph-color-on-white);
+  text-align: left;
   margin-bottom: 20px;
 }
 
+/* Form Styles */
 form {
   max-width: 600px;
   margin: 0 auto;
-  background-color: var(--paragraph-background-color);
+  background-color:#FFFFFF;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -107,7 +43,6 @@ textarea {
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
-
 }
 
 textarea {
@@ -128,91 +63,24 @@ button:hover {
   background-color: var(--secondary-color);
 }
 
-/* Footer styles */
-footer {
-  background-color: #BF9159;
-  color: var(--headline-color-on-color);
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-left p {
-  margin: 0;
-}
-
-.footer-center {
-  text-align: center;
-  flex-grow: 1;
-}
-
-footer a {
-  color: black;
-  text-decoration: underline;
-  /* Always underlined */
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: white;
-}
-
-.copyright {
-  color: black;
-}
-
-.social {
-  margin-top: 10px;
-  display: flex;
-  justify-content: flex-end;
-  flex-grow: 1;
-}
-
-.social a {
-  margin: 0 10px;
-}
-
-.social img {
-  width: 40px;
-}
-
-.lol {
-  color: var(--paragraph-color-on-white);
-}
-
-/* Responsive Design */
+/* Responsive Design for Contact Page */
 @media (max-width: 768px) {
-
-  .footer-left,
-  .footer-center,
-  .social {
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  nav {
-    display: block;
+  .contact-section {
+      padding: 10px;
   }
 
-  nav a {
-    display: block;
-    margin: 5px 0;
+  form {
+      padding: 15px;
   }
 
-  .social a {
-    display: block;
-    margin: 10px auto;
+  input[type="text"],
+  input[type="email"],
+  textarea {
+      font-size: 0.9rem;
+  }
+
+  button {
+      width: 100%;
+      padding: 15px;
   }
 }
