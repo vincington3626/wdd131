@@ -15,14 +15,10 @@ Fonts are separated by a | */
   --paragraph-font: "Noto Serif Display", serif, sans-serif;
 
   /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: #593F1E;
-  /* headlines on a white background */
-  --headline-color-on-color: #D9984A;
-  /* headlines on a colored background */
-  --paragraph-color-on-white: #593F1E;
-  /* paragraph text on a white background */
-  --paragraph-color-on-color: #D9984A;
-  /* paragraph text on a colored background */
+  --headline-color-on-white: #593F1E; /* headlines on a white background */
+  --headline-color-on-color: #D9984A; /* headlines on a colored background */
+  --paragraph-color-on-white: #593F1E; /* paragraph text on a white background */
+  --paragraph-color-on-color: #D9984A; /* paragraph text on a colored background */
   --paragraph-background-color: #593F1E;
   --nav-link-color: #593F1E;
   --nav-background-color: #d9984a;
@@ -37,16 +33,13 @@ Fonts are separated by a | */
   font-style: normal;
 }
 
-
 .noto-serif-display {
   font-family: "Noto Serif Display", serif;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 400;
+  font-variation-settings: "wdth" 400;
 }
-
 
 /*  Look around below...but DON'T CHANGE ANYTHING! */
 
@@ -91,8 +84,8 @@ header {
   background-color: var(--paragraph-background-color);
 }
 
-header>h1,
-header>h2 {
+header > h1,
+header > h2 {
   color: var(--headline-color-on-color);
 }
 
@@ -149,7 +142,6 @@ nav {
 nav {
   list-style-type: none;
   display: flex;
-
 }
 
 nav a {
@@ -157,7 +149,6 @@ nav a {
   min-width: 120px;
   text-decoration: none;
   padding: 10px;
-
 }
 
 nav a:link,
@@ -173,19 +164,17 @@ nav a:hover {
 .sitemap {
   display: grid;
   justify-content: center;
-
   grid-template-columns: repeat(6, 15%);
   grid-template-rows: 3em 1.5em 1.5em 3em;
-  grid-template-areas: ". . home home . ."
+  grid-template-areas:
+    ". . home home . ."
     ". . . top . ."
     ". left left right right ."
     "page2 page2 . . page3 page3";
 }
 
-.sitemap>div {
-
+.sitemap > div {
   text-align: center;
-
 }
 
 .sm-home {
