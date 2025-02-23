@@ -201,12 +201,15 @@ main {
 }
 
 .why-choose-section h2 {
+  text-align: center;
   font-size: 2rem;
   margin-bottom: var(--spacing-small);
 }
 
 .why-choose-section p {
-  margin-bottom: var(--spacing-small);
+  max-width: 800px;
+  margin: 0 auto var(--spacing-medium); 
+  text-align: left; 
 }
 
 /* Accordion Styles */
@@ -277,17 +280,23 @@ main {
 }
 
 .products-section h2 {
+  text-align: center;
   font-size: 2rem;
   margin-bottom: var(--spacing-small);
 }
 
 .products-section h3 {
-  font-size: 1.5rem;
+  text-align: left;
+  font-size: 1.25 rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: var(--spacing-small);
 }
 
 .products-section p {
-  margin-bottom: var(--spacing-small);
+  max-width: 800px;
+  margin: 0 auto var(--spacing-medium)
 }
 
 /* ===== Footer ===== */
